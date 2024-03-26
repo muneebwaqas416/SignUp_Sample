@@ -176,13 +176,17 @@ export default function SignUp() {
                                 <span className='universal span-input-fields'>
 
                                 <input onChange={(e)=>{setpassword(e.target.value)}} 
-                                value={password} type='password' placeholder='Password' 
+                                value={password} 
+                                type={showPassword ? 'text' : 'password'} 
+                                placeholder='Password' 
                                 onBlur={(e)=>{passwordValidation(e)}}
                                 className='input-fields'></input>
                                 
                                 <button type='button' className='toggle-btn'>
-                                  <span className='toogle-span block'>
-                                  Muneeb
+                                  <span className='toogle-span'>
+                                  <IconButton onClick={togglePasswordVisibility}>
+                {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+              </IconButton>
                                   </span>
                                 </button>
                                 {
