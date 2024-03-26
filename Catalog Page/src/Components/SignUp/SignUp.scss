@@ -1,0 +1,238 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+@import url('https://fonts.cdnfonts.com/css/apercu-pro');
+*{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Apercu Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;                     
+}
+.Underline:hover{
+    text-decoration: underline;
+}
+.submit{
+    background-color: rgb(25, 25, 25);
+    border-radius: 3px;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 16px;
+    font-family: apercu-pro, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    height: 40px;
+    line-height: 1.4;
+    padding: 0px;
+    width: 100%;
+    appearance: none;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+.radio{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    outline: 0px;
+    transition: all 0.2s ease-in-out 0s;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(194, 194, 193);
+}
+.radio input[type="radio"]:checked{
+    background-color: rgb(255, 255, 255);
+    border: 6px solid rgb(25, 25, 25);
+}
+
+
+.left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 100vw;
+
+    background-color: #191919;
+}
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: rgba(25, 25, 25, 0.12) 0px 2px 5px 0.5px;
+    padding: 8px 0px;
+    position: absolute;
+    z-index: 1;
+    transform-origin: left bottom;
+    will-change: transform, opacity;
+    transition: transform 150ms ease-in 0s, opacity 150ms ease-in 0s, visibility 150ms ease-in 0s;
+    top: 2.25rem;
+    left: 1.5rem;
+    pointer-events: initial;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    a{
+        appearance: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        border: none;
+        max-width: 100%;
+        text-align: left;
+        color: inherit;
+        cursor: pointer;
+        min-height: 32px;
+        background-color: rgb(240, 240, 240);
+        text-decoration: none;
+        outline: none;
+        width: 100%;
+    }
+}
+.right{
+    position: relative;
+    display: grid;
+    grid-template-rows: [first] 52px [second] auto [third] 52px;
+    grid-template-columns: auto;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    min-height: 90vh;
+    background-color: transparent;
+    margin-left: -16px;
+}
+
+.login{
+    max-width: 100%;
+}
+.universal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.warning-para{
+    color: rgb(193, 59, 47);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0.5rem 0 0.375rem 1.25rem;
+    position: relative;    
+}
+.warning::before{
+    content: "";
+    background: url(https://www.typeform.com/static/signup-page/warning.svg) 50% center repeat;
+    width: 0.875rem;
+height: 0.875rem;
+position: absolute;
+left: 0rem;
+top: 0.6875rem;
+
+}
+.checkbox{
+
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 16px;
+    padding-left: 30px;
+    position: relative;
+}
+.checkbox a{
+    text-decoration: underline;
+}
+.checkbox-field{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    transition: background-color 0.15s ease 0s;
+}
+.checkbox-field:checked{
+    background-color: black;
+}
+.input-fields{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 6px 8px;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 16px;
+    border: none;
+}
+.span-input-fields{
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid rgb(194, 194, 193);
+    border-radius: 3px;
+}
+
+.toggle-btn{
+    background: none;
+    border: none;
+    color: inherit;
+    outline: inherit;
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+}
+.toogle-span{
+    right: 5px;
+    position: absolute;
+    top: 58%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    padding: 6px 8px;
+    opacity: 0.175;
+    cursor: pointer;
+    font-size: 0px;
+    user-select: none;
+}
+.login-btn{
+display: inline-block;
+    cursor: pointer;
+    font-family: inherit;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgb(25, 25, 25);
+    transition: background-color 0.2s ease-out 0s, border-color, color, opacity;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(25, 25, 25);
+    border-image: initial;
+}
+
+.heading{
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgb(94, 94, 94);
+    margin-bottom: 24px;
+    text-align: center;
+    max-width: 100%;
+}
+.form{
+    width: 100%;
+}
